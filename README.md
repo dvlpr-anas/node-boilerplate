@@ -20,8 +20,17 @@ npm i
 - Import the provided qp-assessment.sql file into your local MySQL database.
 - Make sure to create a database named qp-assessment before importing the SQL file.
 
-### Step 4: Default Users
+### Step 4: Run the Project
+```bash
+npm run dev
+```
+
+### Default Users
 Two default users are created in the database:
 1. userName :- anas and password :- 123456 (Admin)
 2. userName :- john and password :- 123456
 
+### Postman Collection
+A Postman collection is included in the project for testing and exploring the API. You can find the collection file at qp-assessment.postman_collection.json.
+
+Import this collection into Postman and use the available requests to interact with the API. The collection includes examples and covers various API endpoints.
