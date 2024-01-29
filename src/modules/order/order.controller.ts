@@ -4,7 +4,11 @@ import { User } from '../../models/user.model'
 import { getAuthenticatedUser } from '../../utils/get-authenticated-user'
 import { sendReponse } from '../../utils/send-response'
 import { throwError } from '../../utils/throw-error'
-import { addOrderDetailService, addOrderService, getAllOrdersService } from './order.service'
+import {
+    addOrderDetailService,
+    addOrderService,
+    getAllOrdersService,
+} from './order.service'
 
 interface Detail {
     id: number
