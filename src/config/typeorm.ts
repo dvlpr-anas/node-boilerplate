@@ -7,5 +7,4 @@ export default new DataSource({
     ...mysqlConfig(),
     type: 'mysql',
     entities: [join(__dirname, '../', 'models', '*.model.{ts,js}')],
-    synchronize: false
 })
