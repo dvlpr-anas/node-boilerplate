@@ -17,8 +17,8 @@ cd grocery-booking-api
 npm i
 ```
 ### Step 3: Import Database
-- Import the provided qp-assessment.sql file into your local MySQL database.
-- Make sure to create a database named qp-assessment before importing the SQL file.
+- Import the provided	**qp-assessment.sql** file at root into your local MySQL database.
+- Make sure to create a database named **qp-assessment** before importing the SQL file.
 
 ### Step 4: Run the Project
 ```bash
@@ -31,6 +31,6 @@ Two default users are created in the database:
 2. userName :- john and password :- 123456
 
 ### Postman Collection
-A Postman collection is included in the project for testing and exploring the API. You can find the collection file at qp-assessment.postman_collection.json.
+A Postman collection is included in the project for testing and exploring the API. You can find the collection file named **qp-assessment.postman_collection.json** at root.
 
 Import this collection into Postman and use the available requests to interact with the API. The collection includes examples and covers various API endpoints.
