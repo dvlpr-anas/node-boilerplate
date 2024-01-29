@@ -15,9 +15,10 @@ export class Order extends BaseEntity {
     @PrimaryGeneratedColumn()
     id!: number
 
-    @ManyToOne((_type) => User, (user) => user) user!: User
+    @ManyToOne(() => User, (user) => user.orders)
+    user!: User
 
-    @OneToMany((_type) => OrderDetails, (orderDetals) => orderDetals)
+    @OneToMany(() => OrderDetails, (orderDetals) => orderDetals.order)
     orderDetail!: OrderDetails[]
 
     @Column({

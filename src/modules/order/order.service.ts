@@ -15,3 +15,14 @@ export const addOrderDetailService = async (
 ): Promise<OrderDetails> => {
     return await orderDetailRepo.save(orderDetal)
 }
+
+export const getAllOrdersService = async (userId: number): Promise<any> => {
+    return await orderRepo.find({
+        relations: {
+            orderDetail: true,
+        },
+        where: {
+            user: { id: userId }
+        }
+    })
+}       

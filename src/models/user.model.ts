@@ -22,7 +22,8 @@ export class User extends BaseEntity {
     @Column({ default: 'User' })
     role!: string
 
-    @OneToMany((_type) => Order, (order) => order) orders!: Order[]
+    @OneToMany(() => Order, (order) => order.user)
+    orders!: Order[]
 
     @Column({
         type: 'timestamp',

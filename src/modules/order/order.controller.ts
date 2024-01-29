@@ -4,7 +4,7 @@ import { User } from '../../models/user.model'
 import { getAuthenticatedUser } from '../../utils/get-authenticated-user'
 import { sendReponse } from '../../utils/send-response'
 import { throwError } from '../../utils/throw-error'
-import { addOrderDetailService, addOrderService } from './order.service'
+import { addOrderDetailService, addOrderService, getAllOrdersService } from './order.service'
 
 interface Detail {
     id: number
@@ -46,6 +46,24 @@ export const addOrder = async (
 
         await addOrderDetailService(details)
         return sendReponse(res, 'Order Placed', 201)
+    } catch (error) {
+        console.log(error)
+        return throwError('Something went wrong', next)
+    }
+}
+
+export const getAllOrders = async (
+    req: Request,
+    res: Response,
+    next: NextFunction,
+) => {
+    try {
+        const user = getAuthenticatedUser(req) as User
+        if (!user) return throwError('No User Found', next, 404)
+
+        const order = await getAllOrdersService(user.id)
+
+        return sendReponse(res, 'All Orders', order, 201)
     } catch (error) {
         console.log(error)
         return throwError('Something went wrong', next)

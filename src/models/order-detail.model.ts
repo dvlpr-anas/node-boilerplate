@@ -15,9 +15,10 @@ export class OrderDetails extends BaseEntity {
     @PrimaryGeneratedColumn()
     id!: number
 
-    @ManyToOne((_type) => Order, (order) => order) order!: Order
+    @ManyToOne((_type) => Order, (order) => order.orderDetail)
+    order!: Order
 
-    @ManyToOne((_type) => Grocery)
+    @ManyToOne((_type) => Grocery, (grocery) => grocery.id)
     @JoinColumn()
     grocery!: Grocery
 
