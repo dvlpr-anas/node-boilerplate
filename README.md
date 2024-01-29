@@ -18,3 +18,8 @@ cd grocery-booking-api
 ```bash
 npm i
 ```
+### Step 3: Import Database
+```
+- Import the provided qp-assessment.sql file into your local MySQL database.
+- Make sure to create a database named qp-assessment before importing the SQL file.
+```
