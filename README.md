@@ -22,4 +22,6 @@ npm i
 
 ### Step 4: Default Users
 Two default users are created in the database:
+1. userName :- anas and password :- 123456 (Admin)
+2. userName :- john and password :- 123456
 
